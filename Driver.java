@@ -12,35 +12,6 @@ public class Driver {
  * updated using the different methods.
  */
 
- public void printItemInventory() {
-    System.out.println("Item Inventory:");
-    for (Slot slot : slots) {
-        Item item = slot.getItem();
-        int quantity = slot.getQuantity();
-        System.out.println(item.getName() + ": " + quantity);
-    }
-}
-
-public void printCashInventory() {
-    System.out.println("Cash Inventory:");
-    for (Cash cash : cashInventory.getcashList()) {
-        int quantity = cash.getQuantity();
-        System.out.println(cash.getValue() + "php: " + quantity);
-    }
-    for (Coin coin : cashInventory.getcoinsList()) {
-        int quantity = coin.getQuantity();
-        System.out.println(coin.getValue() + "php: " + quantity);
-    }
-}
-
-public void printTransactionLog() {
-    System.out.println("Transaction Log:");
-    for (Sale sale : transactionLog.getSales()) {
-        Item item = sale.getItem();
-        System.out.println("Item: " + item.getName() + ", Price: " + item.getPrice());
-    }
-}
-
 
     public void createVendingMachine(VendingMachine vendingMachine) {
         Scanner scanner = new Scanner(System.in);
@@ -86,10 +57,10 @@ public void printTransactionLog() {
            scanner.close();
     }
 
-    public void testVendingMachine(VendingMachine vendingMachine)
+  /*   public void testVendingMachine(VendingMachine vendingMachine)
     {
         
-    }
+    } */
 
     public void VendingMachineFactory(VendingMachine vendingmachine)
     {
